@@ -3,7 +3,7 @@
  */
 const Koa = require('koa');
 const app = new Koa();
-const Config = require('./config/config');
+// const Config = require('./config/config');
 const onerror = require('koa-onerror');
 const middleware = require('koa-webpack');
 const webpackDevConf = require('./build/webpack.dev.conf');
@@ -36,4 +36,4 @@ app.use(async(ctx, next) => {
 	console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
 });
 
-app.listen(Config.node.port);
+app.listen(8082);
